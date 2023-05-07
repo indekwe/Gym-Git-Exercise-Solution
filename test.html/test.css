@@ -1,0 +1,32 @@
+.c1 {
+    display: grid;
+    gap: 1.5rem;
+    height: 100px;
+    width: 200px;
+    padding-block: 2rem;
+    margin-inline: auto;
+    background-color: rebeccapurple;
+    grid-template-columns: 100px 100px 1000px;
+}
+.c2 {
+    display: grid;
+    gap: 1.5rem;
+    height: 100px;
+    width: 200px;
+    padding-block: 2rem;
+    margin-inline: auto;
+    background-color:black
+}
+.c3 {
+    display: grid;
+    gap: 1.5rem;
+    height: 100px;
+    width: 200px;
+    padding-block: 2rem;
+    margin-inline: auto;
+    background-color: red
+}
+body {
+    display: grid;
+    grid-template-columns: 100px 100px 1000px;
+}
