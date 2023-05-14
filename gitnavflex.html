@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <nav class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Contract and design</a></li>
+    </nav>
+    <style>
+        .nav {
+            display: flex;
+            list-style: none;
+            flex-flow: row wrap;
+            background-color: aqua;
+            justify-content: flex-end;
+            margin: 0;
+        }
+        .nav a {
+            text-decoration: none;
+            display: block;
+            padding: 1em;
+            color: white
+        } .nav a:hover {
+            background: red;
+        }
+            @media all and (max-width: 800px) {
+                .nav {
+                    flex-flow: column wrap;
+                    padding: 0;
+                }
+                .nav a {
+                    text-align: center;
+                    padding: 10px;
+                    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+                }
+                .nav li:last-of-type a {
+                    border-bottom: none;
+
+                }
+            
+            }
+        
+
+    </style>
+</html>
