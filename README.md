@@ -1162,5 +1162,577 @@ index bb4a6f8..2b3b38e 100644
 
 1@DESKTOP-QOH1F4K MINGW64 /d/STASH (main)
 $
+USER L@NIYO-T MINGW64 ~/vscode (master)
+$ git config --global user.name "indekwe"
 
+USER L@NIYO-T MINGW64 ~/vscode (master)
+$ git config --global user.email "findekwe@gmail.com"
+
+USER L@NIYO-T MINGW64 ~/vscode (master)
+$ git config --global init.default branch master
+
+USER L@NIYO-T MINGW64 ~/vscode (master)
+$ git init 
+Reinitialized existing Git repository in C:/Users/USER L/vscode/.git/
+
+USER L@NIYO-T MINGW64 ~/vscode (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test.html/test.css
+        deleted:    test.html/test.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        animation.html
+        codewars/
+        cssgridgame.css
+        cssgridgame.html
+        flex.html
+        test.html/justify-align.html
+        test.html/out.css
+        test.html/out.html
+        test.html/services.html
+        w3.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+USER L@NIYO-T MINGW64 ~/vscode (master)
+$ git --add test.html/service.html
+unknown option: --add
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--config-env=<name>=<envvar>] <command> [<args>]
+
+USER L@NIYO-T MINGW64 ~/vscode (master)
+$ git add test.html/service.html
+fatal: pathspec 'test.html/service.html' did not match any files
+
+USER L@NIYO-T MINGW64 ~/vscode (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)        
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test.html/test.css
+        deleted:    test.html/test.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        animation.html
+        codewars/
+        cssgridgame.css
+        cssgridgame.html
+        flex.html
+        test.html/justify-align.html
+        test.html/out.css
+        test.html/out.html
+        test.html/services.html
+        w3.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+USER L@NIYO-T MINGW64 ~/vscode (master)
+$ git add test.html/services.html
+
+USER L@NIYO-T MINGW64 ~/vscode (master)
+$ git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   test.html/services.html
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test.html/services.html
+        modified:   test.html/test.css
+        deleted:    test.html/test.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        animation.html
+        codewars/
+        cssgridgame.css
+        cssgridgame.html
+        flex.html
+        test.html/justify-align.html
+        test.html/out.css
+        test.html/out.html
+        w3.html
+
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git commit -m "services commited"
+[ft/bundle-2 1fc0acd] services commited    
+ 1 file changed, 83 insertions(+)
+ create mode 100644 test.html/services.html
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git remote add origin https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+error: remote origin already exists.
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git remote set origin https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+error: unknown subcommand: `set'
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename [--[no-]progress] <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git branch -M main
+
+USER L@NIYO-T MINGW64 ~/vscode (main)
+$ git branch
+* main
+  master
+
+USER L@NIYO-T MINGW64 ~/vscode (main)
+$ git branch -M ft/bundle-2
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git push -u origin
+fatal: The current branch ft/bundle-2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bundle-2
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git push --set upstream origin ft/bundle-2
+error: src refspec origin does not match any
+error: failed to push some refs to 'upstream'
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git pull --rebase origin ft/bundle-2
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test.html/services.html
+        modified:   test.html/test.css
+        deleted:    test.html/test.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        animation.html
+        codewars/
+        cssgridgame.css
+        cssgridgame.html
+        flex.html
+        test.html/justify-align.html
+        test.html/out.css
+        test.html/out.html
+        w3.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git commit -m "services commited"
+On branch ft/bundle-2
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test.html/services.html
+        modified:   test.html/test.css
+        deleted:    test.html/test.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        animation.html
+        codewars/
+        cssgridgame.css
+        cssgridgame.html
+        flex.html
+        test.html/justify-align.html
+        test.html/out.css
+        test.html/out.html
+        w3.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test.html/services.html
+        modified:   test.html/test.css
+        deleted:    test.html/test.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        animation.html
+        codewars/
+        cssgridgame.css
+        cssgridgame.html
+        flex.html
+        test.html/justify-align.html
+        test.html/out.css
+        test.html/out.html
+        w3.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git log oneline
+fatal: ambiguous argument 'oneline': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git log --oneline
+1fc0acd (HEAD -> ft/bundle-2) services commited
+996cec0 (origin/master, master) implement grid layout
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git pull --rebase origin ft/bundle-2
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git stash
+Saved working directory and index state WIP on ft/bundle-2: 1fc0acd services commited
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git pull --rebase origin ft/bundle-2
+fatal: couldn't find remote ref ft/bundle-2
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git diff
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git log
+commit 1fc0acd3cfbdb538ae63a978f4737ca933c17216 (HEAD -> ft/bundle-2)
+Author: indekwe <findekwe@gmail.com>
+Date:   Sat May 20 15:27:09 2023 +0200
+
+    services commited
+
+commit 996cec0ea0a72bff3efdc04f4e788bab298f2a9a (origin/master, master)
+Author: indekwe <findekwe@gmail.com>
+Date:   Sun May 7 16:26:52 2023 +0200
+
+    implement grid layout
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git push u- origin ft/bundle-2
+error: src refspec origin does not match any
+error: failed to push some refs to 'u-'
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git fetch
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git push --set upstream origin ft/bundle-2
+error: src refspec origin does not match any
+error: failed to push some refs to 'upstream'
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git push --rebase origin ft/bundle-2
+error: unknown option `rebase'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --force-if-includes   require remote updates to be integrated locally
+    --recurse-submodules (check|on-demand|no)
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git pull --rebase origin ft/bundle-2
+fatal: couldn't find remote ref ft/bundle-2
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git pull --rebase origin main
+fatal: couldn't find remote ref main
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git branch
+* ft/bundle-2
+  master
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git pull --rebase origin master
+From https://github.com/indekwe/css-grid
+ * branch            master     -> FETCH_HEAD
+Current branch ft/bundle-2 is up to date.
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git push --set upstream origin ft/bundle-2
+error: src refspec origin does not match any
+error: failed to push some refs to 'upstream'
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git push u- origin ft/bundle-2
+error: src refspec origin does not match any
+error: failed to push some refs to 'u-'
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git push u- origin master
+error: src refspec origin does not match any
+error: failed to push some refs to 'u-'
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git push --set upstream origin master
+error: src refspec origin does not match any
+error: failed to push some refs to 'upstream'
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git switch master
+Switched to branch 'master'
+
+USER L@NIYO-T MINGW64 ~/vscode (master)
+$ git branch -N main
+error: unknown switch `N'
+usage: git branch [<options>] [-r | -a] [--merged] [--no-merged]
+   or: git branch [<options>] [-f] [--recurse-submodules] <branch-name> [<start-point>]
+   or: git branch [<options>] [-l] [<pattern>...]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
+   or: git branch [<options>] [-r | -a] [--format]
+
+Generic options
+    -v, --verbose         show hash and subject, give twice for upstream branch
+    -q, --quiet           suppress informational messages
+    -t, --track[=(direct|inherit)]
+                          set branch tracking configuration
+    -u, --set-upstream-to <upstream>
+                          change the upstream info
+    --unset-upstream      unset the upstream info
+    --color[=<when>]      use colored output
+    -r, --remotes         act on remote-tracking branches
+    --contains <commit>   print only branches that contain the commit
+    --no-contains <commit>
+                          print only branches that don't contain the commit
+    --abbrev[=<n>]        use <n> digits to display object names
+
+Specific git-branch actions:
+    -a, --all             list both remote-tracking and local branches
+    -d, --delete          delete fully merged branch
+    -D                    delete branch (even if not merged)
+    -m, --move            move/rename a branch and its reflog
+    -M                    move/rename a branch, even if target exists
+    -c, --copy            copy a branch and its reflog
+    -C                    copy a branch, even if target exists
+    -l, --list            list branch names
+    --show-current        show current branch name
+    --create-reflog       create the branch's reflog
+    --edit-description    edit the description for the branch
+    -f, --force           force creation, move/rename, deletion
+    --merged <commit>     print only branches that are merged
+    --no-merged <commit>  print only branches that are not merged
+    --column[=<style>]    list branches in columns
+    --sort <key>          field name to sort on
+    --points-at <object>  print only branches of the object
+    -i, --ignore-case     sorting and filtering are case insensitive
+    --recurse-submodules  recurse through submodules
+    --format <format>     format to use for the output
+
+
+USER L@NIYO-T MINGW64 ~/vscode (master)
+$ git branch -M main
+
+USER L@NIYO-T MINGW64 ~/vscode (main)
+$ git push --set upstream origin main
+error: src refspec origin does not match any
+error: failed to push some refs to 'upstream'
+
+USER L@NIYO-T MINGW64 ~/vscode (main)
+$ git push --set upstream origin main
+error: src refspec origin does not match any
+error: failed to push some refs to 'upstream'
+
+USER L@NIYO-T MINGW64 ~/vscode (main)
+$ git remote set origin https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+error: unknown subcommand: `set'
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename [--[no-]progress] <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+USER L@NIYO-T MINGW64 ~/vscode (main)
+$ git remote add origin https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+error: remote origin already exists.
+
+USER L@NIYO-T MINGW64 ~/vscode (main)
+$ git remote set origin https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+error: unknown subcommand: `set'
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename [--[no-]progress] <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+USER L@NIYO-T MINGW64 ~/vscode (main)
+$ git remote set-url origin https://github.com/indekwe/Gym-Git-Exercise-Solution.gitA
+
+USER L@NIYO-T MINGW64 ~/vscode (main)
+$ git switch
+fatal: missing branch or commit argument
+
+USER L@NIYO-T MINGW64 ~/vscode (main)
+$ git branch
+  ft/bundle-2
+* main
+
+USER L@NIYO-T MINGW64 ~/vscode (main)
+$ git switch ft/bundle-2
+Switched to branch 'ft/bundle-2'
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git remote set-url origin https://github.com/indekwe/Gym-Git-Exercise-Solution.gitA
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git push --set upstream origin ft/bundle-2
+error: src refspec origin does not match any
+error: failed to push some refs to 'upstream'
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git push -u origin main
+remote: Repository not found.
+fatal: repository 'https://github.com/indekwe/Gym-Git-Exercise-Solution.gitA/' not found
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git remote set-url origin https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git push -u origin main
+To https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/indekwe/Gym-Git-Exercise-Solution.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git pull --rebase origin ft/bundle-2
+fatal: couldn't find remote ref ft/bundle-2
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git pull --rebase origin main
+remote: Enumerating objects: 27, done.
+remote: Counting objects: 100% (27/27), done.
+remote: Compressing objects: 100% (17/17), done.
+remote: Total 27 (delta 9), reused 18 (delta 8), pack-reused 0
+Unpacking objects: 100% (27/27), 11.66 KiB | 8.00 KiB/s, done.
+From https://github.com/indekwe/Gym-Git-Exercise-Solution
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+Successfully rebased and updated refs/heads/ft/bundle-2.
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git push -u origin main
+To https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/indekwe/Gym-Git-Exercise-Solution.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$ git push -u origin ft/bundle-2
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 1.02 KiB | 149.00 KiB/s, done.
+Total 8 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/indekwe/Gym-Git-Exercise-Solution/pull/new/ft/bundle-2
+remote:
+To https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+
+USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
+$
 ***
