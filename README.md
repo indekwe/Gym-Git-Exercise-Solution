@@ -1736,3 +1736,721 @@ branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
 USER L@NIYO-T MINGW64 ~/vscode (ft/bundle-2)
 $
 ***
+## bundle 2
+
+### ex2
+***bash
+
+1@DESKTOP-QOH1F4K MINGW64 /d/gymtailwind
+$ cd d:/me/gitexercise
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise (main)
+$ git bracnch
+git: 'bracnch' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise (main)
+$ git branch
+  dev
+* main
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise (main)
+$ git clone test.html
+fatal: repository 'test.html' does not exist
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise (main)
+$ git clone https://github.com/indekwe/Gym-Git-Exercise-Solution/blob/main/test.html/services.html.git
+Cloning into 'services.html'...
+fatal: repository 'https://github.com/indekwe/Gym-Git-Exercise-Solution/blob/main/test.html/services.html.git/' not found
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise (main)
+$ git clone https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+Cloning into 'Gym-Git-Exercise-Solution'...
+remote: Enumerating objects: 39, done.
+remote: Counting objects: 100% (39/39), done.
+remote: Compressing objects: 100% (27/27), done.
+remote: Total 39 (delta 13), reused 26 (delta 10), pack-reused 0
+Receiving objects: 100% (39/39), 15.79 KiB | 646.00 KiB/s, done.
+Resolving deltas: 100% (13/13), done.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ../html.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../...
+        ../.gitignore.txt
+        ../flexbox/
+        ./
+        ../js-basics/
+        ../navflex/
+        ../tailwindcss/
+        ../team.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise (main)
+$ git log --oneline
+3916c30 (HEAD -> main, dev) updated gitnavflex
+d703ff1 y git exercise
+cd7a24b first commit
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise (main)
+$ cd d:/me/gitexercise/Gym-Git-Exercise-Solution
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$ git pull
+Already up to date.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$ git branch ft/service-redesign
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test.html/services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git add test.html/services.html
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git commit -m "changes in sevices for ex2 bundle2"
+[ft/service-redesign c4c0dc8] changes in sevices for ex2 bundle2
+ 1 file changed, 5 insertions(+)
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git pull origin ft/services-redesign 
+fatal: couldn't find remote ref ft/services-redesign
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git push origin ft/services-redesign
+error: src refspec ft/services-redesign does not match any
+error: failed to push some refs to 'https://github.com/indekwe/Gym-Git-Exercise-Solution.git'
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git push origin main
+Everything up-to-date
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git push origin main
+Everything up-to-date
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+nothing to commit, working tree clean
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test.html/services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git add test.html/services.html
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git commit -m "changes in sevices for ex2 bundle2 second time"
+[ft/service-redesign 6a99500] changes in sevices for ex2 bundle2 second time
+ 1 file changed, 5 insertions(+)
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git push origin ft/bundle-2
+error: src refspec ft/bundle-2 does not match any
+error: failed to push some refs to 'https://github.com/indekwe/Gym-Git-Exercise-Solution.git'
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git clone https://github.com/indekwe/Gym-Git-Exercise-Solution/pull/1#issue-1718184556
+Cloning into '1#issue-1718184556'...
+fatal: https://github.com/indekwe/Gym-Git-Exercise-Solution/pull/1#issue-1718184556/info/refs not valid: 
+is this a git repository?
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$ git clone https://github.com/indekwe/Gym-Git-Exercise-Solution/pull/1#issue-1718184556
+Cloning into '1#issue-1718184556'...
+fatal: https://github.com/indekwe/Gym-Git-Exercise-Solution/pull/1#issue-1718184556/info/refs not valid: 
+is this a git repository?
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$ git push orgin main
+fatal: 'orgin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$ git pull origin main
+From https://github.com/indekwe/Gym-Git-Exercise-Solution
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$ git push origin main
+Everything up-to-date
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$ <li>
+bash: syntax error near unexpected token `newline'
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$                         <a href="#">
+bash: syntax error near unexpected token `newline'
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$                             <span>About</span>
+bash: syntax error near unexpected token `newline'
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$                         </a>
+bash: syntax error near unexpected token `newline'
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$ git branch
+  ft/service-redesign
+* main
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$ git switch ft/service-redesign
+error: Your local changes to the following files would be overwritten by checkout:
+        test.html/services.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$ git commit -m "commit services fourth"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test.html/services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$ git add test.html/services.html
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$ git commit -m "services commited fith time"
+[main 58e5a3e] services commited fith time
+ 1 file changed, 13 insertions(+)
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$ git log --oneline
+58e5a3e (HEAD -> main) services commited fith time
+a9b4d60 (origin/main, origin/HEAD) Update README.md
+f069ee7 Merge pull request #1 from indekwe/ft/bundle-2
+1703875 (origin/ft/bundle-2) services commited
+ca8766b implement grid layout
+9184c11 Update README.md
+e584c69 About stash commited
+388164d home stash commited
+78d1915 need team stash to survive
+83a733f need stash about
+7653786 this will be stashed
+9a47dad Update README.md
+973b921 perfect.html gitexercise
+5ae1cf2 Initial commit
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 458 bytes | 458.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+   a9b4d60..58e5a3e  main -> main
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test.html/services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git add test.html/services.html
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git commit -m "sixth sevice commit"
+[ft/service-redesign 45755e5] sixth sevice commit
+ 1 file changed, 5 insertions(+)
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git status 
+On branch ft/service-redesign
+nothing to commit, working tree clean
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 1.16 KiB | 397.00 KiB/s, done.
+Total 12 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/indekwe/Gym-Git-Exercise-Solution/pull/new/ft/service-redesign
+remote:
+To https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git diff
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git log 
+commit 45755e5971e31a6e22429e1218f8f8db824c51d8 (HEAD -> ft/service-redesign, origin/ft/service-redesign)Author: indekwe <findekwe@gmail.com>
+Date:   Mon May 22 20:02:05 2023 -0700
+
+    sixth sevice commit
+
+commit 6a995009aaaef7943d06f58edd8b8348e76da849
+Author: indekwe <findekwe@gmail.com>
+Date:   Mon May 22 19:33:39 2023 -0700
+
+    changes in sevices for ex2 bundle2 second time
+
+commit c4c0dc84b124cc2f57e3d271526c8718818c9a67
+Author: indekwe <findekwe@gmail.com>
+Date:   Mon May 22 19:17:27 2023 -0700
+
+    changes in sevices for ex2 bundle2
+
+commit a9b4d605d596806bef65f662bbbb691c4f8134ba
+Author: indekwe <131709694+indekwe@users.noreply.github.com>
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git diff ft/service-redesign
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git diff main
+diff --git a/test.html/services.html b/test.html/services.html
+index 5499155..e23cf70 100644
+--- a/test.html/services.html
++++ b/test.html/services.html
+@@ -30,15 +30,17 @@
+                     </li>
+                     <li>
+                         <a href="#">
+-                            <span>services<li>
+-                                <a href="#">
+-                                    <span>About</span>
+-                                </a>
+-                            </li><li>
+-                                <a href="#">
+-                                    <span>About</span>
+-                                </a>
+-                            </li>
++                            <span>services and their equivalence</span>
++                        </a>
++                    </li>
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git merge main
+Auto-merging test.html/services.html
+CONFLICT (content): Merge conflict in test.html/services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign|MERGING)      
+$ git merge main
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign|MERGING)      
+$ git diff main
+diff --git a/test.html/services.html b/test.html/services.html
+index 5499155..6924eb2 100644
+--- a/test.html/services.html
++++ b/test.html/services.html
+@@ -30,6 +30,19 @@
+                     </li>
+                     <li>
+                         <a href="#">
++<<<<<<< HEAD
++                            <span>services and their equivalence</span>
++                        </a>
++                    </li>
++                    <li>
++                        <a href="#">
++                            <span>services and your will is protected</span>
++                        </a>
++                    </li>
++                    <li>
++                        <a href="#">
++                            <span>services and your survival</span>
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign|MERGING)      
+$ git checkout main
+error: you need to resolve your current index first
+test.html/services.html: needs merge
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign|MERGING)      
+$ git merge main
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign|MERGING)      
+$ git add .
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign|MERGING)      
+$ git merge main
+fatal: You have not concluded your merge (MERGE_HEAD exists).
+Please, commit your changes before you merge.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign|MERGING)      
+$ git commit m- "merging services" 
+fatal: cannot do a partial commit during a merge.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign|MERGING)      
+$ git commit . m- "merging services"
+fatal: cannot do a partial commit during a merge.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign|MERGING)      
+$ git commit --all "merging"
+fatal: paths 'merging ...' with -a does not make sense
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign|MERGING)      
+$ git merge main
+fatal: You have not concluded your merge (MERGE_HEAD exists).
+Please, commit your changes before you merge.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign|MERGING)      
+$ git commit . m- "merging services" 
+fatal: cannot do a partial commit during a merge.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign|MERGING)      
+$ git diff main
+diff --git a/test.html/services.html b/test.html/services.html
+index 5499155..1212d80 100644
+--- a/test.html/services.html
++++ b/test.html/services.html
+@@ -30,15 +30,9 @@
+                     </li>
+                     <li>
+                         <a href="#">
+-                            <span>services<li>
+-                                <a href="#">
+-                                    <span>About</span>
+-                                </a>
+-                            </li><li>
+-                                <a href="#">
+diff --git a/test.html/services.html b/test.html/services.html
+index 5499155..1212d80 100644
+--- a/test.html/services.html
++++ b/test.html/services.html
+@@ -30,15 +30,9 @@
+                     </li>
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign|MERGING)      
+$ git diff main
+diff --git a/test.html/services.html b/test.html/services.html
+index 5499155..1212d80 100644
+--- a/test.html/services.html
++++ b/test.html/services.html
+@@ -30,15 +30,9 @@
+                     </li>
+:...skipping...
+diff --git a/test.html/services.html b/test.html/services.html
+index 5499155..1212d80 100644
+--- a/test.html/services.html
++++ b/test.html/services.html
+@@ -30,15 +30,9 @@
+                     </li>
+                     <li>
+                         <a href="#">
+-                            <span>services<li>
+-                                <a href="#">
+-                                    <span>About</span>
+-                                </a>
+-                            </li><li>
+-                                <a href="#">
+-                                    <span>About</span>
+-                                </a>
+:...skipping...
+diff --git a/test.html/services.html b/test.html/services.html
+diff --git a/test.html/services.html b/test.html/services.html
+index 5499155..1212d80 100644
+--- a/test.html/services.html
+diff --git a/test.html/services.html b/test.html/services.html
+index 5499155..1212d80 100644
+--- a/test.html/services.html
++++ b/test.html/services.html
+@@ -30,15 +30,9 @@
+                     </li>
+                     <li>
+                         <a href="#">
+-                            <span>services<li>
+-                                <a href="#">
+-                                    <span>About</span>
+-                                </a>
+-                            </li><li>
+-                                <a href="#">
+-                                    <span>About</span>
+-                                </a>
+-                            </li>
++
++
+:...skipping...
+diff --git a/test.html/services.html b/test.html/services.html
+index 5499155..1212d80 100644
+--- a/test.html/services.html
++++ b/test.html/services.html
+@@ -30,15 +30,9 @@
+                     </li>
+                     <li>
+                         <a href="#">
+-                            <span>services<li>
+-                                <a href="#">
+-                                    <span>About</span>
+-                                </a>
+-                            </li><li>
+-                                <a href="#">
+-                                    <span>About</span>
+-                                </a>
+-                            </li>
++
++
++
+                         </a>
+:...skipping...
+diff --git a/test.html/services.html b/test.html/services.html
+index 5499155..1212d80 100644
+--- a/test.html/services.html
++++ b/test.html/services.html
+@@ -30,15 +30,9 @@
+                     </li>
+                     <li>
+                         <a href="#">
+-                            <span>services<li>
+-                                <a href="#">
+-                                    <span>About</span>
+-                                </a>
+-                            </li><li>
+-                                <a href="#">
+-                                    <span>About</span>
+-                                </a>
+-                            </li>
++
++
++
+                         </a>
+                     </li>
+                 </ul>
+~
+~
+(END)...skipping...
+diff --git a/test.html/services.html b/test.html/services.html
+index 5499155..1212d80 100644
+--- a/test.html/services.html
+diff --git a/test.html/services.html b/test.html/services.html
+diff --git a/test.html/services.html b/test.html/services.html
+index 5499155..1212d80 100644
+--- a/test.html/services.html
++++ b/test.html/services.html
+@@ -30,15 +30,9 @@
+diff --git a/test.html/services.html b/test.html/services.html
+index 5499155..1212d80 100644
+--- a/test.html/services.html
++++ b/test.html/services.html
+@@ -30,15 +30,9 @@
+                     </li>
+                     <li>
+                         <a href="#">
+-                            <span>services<li>
+-                                <a href="#">
+-                                    <span>About</span>
+-                                </a>
+-                            </li><li>
+-                                <a href="#">
+-                                    <span>About</span>
+-                                </a>
+-                            </li>
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign|MERGING)      
+$ git reset
+Unstaged changes after reset:
+M       test.html/services.html
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git add .
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git commit -m "resolved merging problem"
+[ft/service-redesign 6301e67] resolved merging problem
+ 1 file changed, 3 insertions(+), 11 deletions(-)
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git diff main
+diff --git a/test.html/services.html b/test.html/services.html
+index 5499155..1212d80 100644
+--- a/test.html/services.html
++++ b/test.html/services.html
+@@ -30,15 +30,9 @@
+                     </li>
+                     <li>
+                         <a href="#">
+-                            <span>services<li>
+-                                <a href="#">
+-                                    <span>About</span>
+-                                </a>
+-                            </li><li>
+-                                <a href="#">
+-                                    <span>About</span>
+-                                </a>
+-                            </li>
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git merge main
+Auto-merging test.html/services.html
+CONFLICT (content): Merge conflict in test.html/services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign|MERGING)      
+$ git status
+On branch ft/service-redesign
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   test.html/services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign|MERGING)      
+$ git add .
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign|MERGING)      
+$ git checkout main
+error: Your local changes to the following files would be overwritten by checkout:
+        test.html/services.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign|MERGING)      
+$ git commit -m "conflicts resolved"
+[ft/service-redesign 56e9be2] conflicts resolved
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$ git switch ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+nothing to commit, working tree clean
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$ git push origin main
+Everything up-to-date
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$ git push origin main
+Everything up-to-date
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 862 bytes | 431.00 KiB/s, done.
+Total 8 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+   45755e5..56e9be2  ft/service-redesign -> ft/service-redesign
+
+1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
+$                   
