@@ -83,5 +83,53 @@
             </div>
         </main>
     </div>
+<body>
+  <p>Rock Paper Scissors</p>
+  <button  
+  onclick=" play('Rock')
+  ">Rock</button>
+  <button onclick="play('paper')">Paper</button>
+  <button 
+  onclick=" play('Scissors')
+ "
+  >Scissors</button>
+  <script>
+    
+    function pickcomputerRandom() {
+      const randomValue = (Math.random());
+      let computerRandom = '';
+      /*let computerRandom = ''; this one moved outside the function inorder to let js access this variable(step1)*/
+      /*let computerRandom = ''; this is going to be inseerted into a function and scoop problem is going to be solved by return(step2)*/
+      if (randomValue >= 0 && randomValue < 1/3) {
+        computerRandom = 'Rock'}
+        else if (randomValue >= 1/3 && randomValue < 2/3) {computerRandom = 'Paper';}
+            
+        else if    (randomValue >= 2/3 && randomValue < 1) {computerRandom = 'Scissors';}
+
+        return computerRandom;
+}
+function play(playermv) {
+  computerRandom = pickcomputerRandom();
+  let results = '';
+if (playermv === 'Scissors') {
+    if (computerRandom === 'Rock') {results = 'You lose';}
+    else if (computerRandom === 'Paper') {results = 'You win'}
+    else if (computerRandom === 'Scissors') {results = '.Tie'}
+}
+
+else if (playermv === 'Rock') {
+        if (computerRandom === 'Rock') {results = '.Tie';}
+        else if (computerRandom === 'Paper') {results = 'You lose'}
+        else if (computerRandom === 'Scissors') {results = 'You win'}
+}
+else {
+  if (computerRandom === 'Rock') {results = '.Tie';}
+    else if (computerRandom === 'Paper') {results = 'You lose'}
+    else if (computerRandom === 'Scissors') {results = 'You win'}
+}
+alert(`You picked ${playermv}. Computer picked ${computerRandom}. You ${results}.`);
+}
+  </script>
+>>>>>>> 2d7fe99 (new team commit)
 </body>
 </html>
