@@ -2455,8 +2455,8 @@ To https://github.com/indekwe/Gym-Git-Exercise-Solution.git
 1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
 $                   
 ***bundle 3
-                           ex1
-                           1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main)
+             **completed(ex1 and ex2)
+                          1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main)
 $ git pull --rebase origin main
 remote: Enumerating objects: 46, done.
 remote: Counting objects: 100% (46/46), done.
@@ -2910,5 +2910,138 @@ To https://github.com/indekwe/Gym-Git-Exercise-Solution.git
 branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
 
 1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$ git branch
+* ft/contact-page
+  ft/faq-page
+  ft/team-page
+  main
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$  git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/faq-page)
+$ git branch ft/home-page-redesign
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/faq-page)
+$  git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main)
+$ git add Home.html
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main)
+$ git commit -m "feat: home redesigned "
+[main 38154a3] feat: home redesigned
+ 1 file changed, 1 insertion(+)
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main)
+$ git push -u origin main 
+To https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/indekwe/Gym-Git-Exercise-Solution.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main)
+$ git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 3.47 KiB | 35.00 KiB/s, done.
+From https://github.com/indekwe/Gym-Git-Exercise-Solution
+   5aa7da3..c5d123e  main       -> origin/main
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main)
+$ git merge
+Merge made by the 'ort' strategy.
+ README.md | 458 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 458 insertions(+)
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main)
+$ git push -u origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 589 bytes | 589.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+   c5d123e..0eecaae  main -> main
+branch 'main' set up to track 'origin/main'.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main)
+$  git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/home-page-redesign)
+$ git rebase ft/home-page-redesign
+Current branch ft/home-page-redesign is up to date.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/home-page-redesign)
+$ git status
+On branch ft/home-page-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/home-page-redesign)
+$ git add Home.html
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/home-page-redesign)
+$ git commit -m "feat: home redesigned second times "
+[ft/home-page-redesign ca53014] feat: home redesigned second times
+ 1 file changed, 1 insertion(+)
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/home-page-redesign)
+$ git push -u origin ft/home-page-redesign
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 901 bytes | 450.00 KiB/s, done.
+Total 9 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 3 local objects.
+remote: 
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/indekwe/Gym-Git-Exercise-Solution/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/home-page-redesign)
 $
-                           ****
