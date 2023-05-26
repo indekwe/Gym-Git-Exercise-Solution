@@ -2454,3 +2454,461 @@ To https://github.com/indekwe/Gym-Git-Exercise-Solution.git
 
 1@DESKTOP-QOH1F4K MINGW64 /d/me/gitexercise/Gym-Git-Exercise-Solution (ft/service-redesign)
 $                   
+***bundle 3
+                           ex1
+                           1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main)
+$ git pull --rebase origin main
+remote: Enumerating objects: 46, done.
+remote: Counting objects: 100% (46/46), done.
+remote: Compressing objects: 100% (30/30), done.
+Unpacking objects:  41% (19/46), 3.50 KiB | 6.00 KiB/sremote: Total 46 (delta 17), reused 33 (delta 14), pack-reused 0
+Unpacking objects: 100% (46/46), 19.33 KiB | 8.00 KiB/s, done.
+From https://github.com/indekwe/Gym-Git-Exercise-Solution
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+Auto-merging team.html
+CONFLICT (add/add): Merge conflict in team.html
+error: could not apply 2d7fe99... new team commit
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 2d7fe99... new team commit
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main|REBASE 1/1)
+$ git status
+interactive rebase in progress; onto aeeab52
+Last command done (1 command done):
+   pick 2d7fe99 new team commit
+No commands remaining.
+You are currently rebasing branch 'main' on 'aeeab52'.
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main|REBASE 1/1)
+$ git add team.html
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main|REBASE 1/1)
+$ git branch
+* (no branch, rebasing main)
+  main
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main|REBASE 1/1)
+$ 
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main|REBASE 1/1)
+$ git commit -m "second new team commit"
+[detached HEAD 5aa7da3] second new team commit
+ 1 file changed, 48 insertions(+)
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main|REBASE 1/1)
+$ git push -u origin main
+To https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/indekwe/Gym-Git-Exercise-Solution.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main|REBASE 1/1)
+$ git pull --rebase origin main
+From https://github.com/indekwe/Gym-Git-Exercise-Solution
+ * branch            main       -> FETCH_HEAD
+fatal: It seems that there is already a rebase-merge directory, and
+I wonder if you are in the middle of another rebase.  If that is the
+case, please try
+        git rebase (--continue | --abort | --skip)
+If that is not the case, please
+        rm -fr ".git/rebase-merge"
+and run me again.  I am stopping in case you still have something
+valuable there.
+
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main|REBASE 1/1)
+$ git rebase --continue
+Successfully rebased and updated refs/heads/main.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 883 bytes | 883.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+   aeeab52..5aa7da3  main -> main
+branch 'main' set up to track 'origin/main'.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main)
+$ git branch checkout ft/team-page
+fatal: not a valid object name: 'ft/team-page'
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main)
+$ git branch ft/team-page
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main)
+$ git branch checkout ft/team-page
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main)
+$ git branch
+  checkout
+  ft/team-page
+* main
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main)
+$ git branch -d checkout
+Deleted branch checkout (was 5aa7da3).
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main)
+$ git switch ft/team-page
+Switched to branch 'ft/team-page'
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/team-page)
+$ git push -u origin
+ *  History restored 
+
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/team-page)
+$ it push -u origin ft/team-page
+bash: it: command not found
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/team-page)
+$ git push -u origin ft/team-page
+To https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+ ! [rejected]        ft/team-page -> ft/team-page (fetch first)
+error: failed to push some refs to 'https://github.com/indekwe/Gym-Git-Exercise-Solution.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/team-page)
+$ git fetch
+remote: Enumerating objects: 92, done.
+remote: Counting objects: 100% (87/87), done.
+remote: Compressing objects: 100% (41/41), done.
+remote: Total 78 (delta 33), reused 77 (delta 32), pack-reused 0
+Unpacking objects: 100% (78/78), 8.88 KiB | 2.00 KiB/s, done.
+From https://github.com/indekwe/Gym-Git-Exercise-Solution
+ * [new branch]      ft/bundle-2         -> origin/ft/bundle-2
+ * [new branch]      ft/service-redesign -> origin/ft/service-redesign
+ * [new branch]      ft/team-page        -> origin/ft/team-page
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/team-page)
+$ git status
+On branch ft/team-page
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   team.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/team-page)
+$ git add team.html
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/team-page)
+$ git commit -m "team new  commit in ft"
+[ft/team-page dc0276c] team new  commit in ft
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/team-page)
+$ git remote  add origin https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+error: remote origin already exists.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/team-page)
+$ git push -u origin ft/team-page
+To https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+ ! [rejected]        ft/team-page -> ft/team-page (non-fast-forward)
+error: failed to push some refs to 'https://github.com/indekwe/Gym-Git-Exercise-Solution.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/team-page)
+$ git pull --rebase origin ft/team-page
+From https://github.com/indekwe/Gym-Git-Exercise-Solution
+ * branch            ft/team-page -> FETCH_HEAD
+warning: skipped previously applied commit 5ae1cf2
+warning: skipped previously applied commit 973b921
+warning: skipped previously applied commit 9a47dad
+warning: skipped previously applied commit 7653786
+warning: skipped previously applied commit 83a733f
+warning: skipped previously applied commit 78d1915
+warning: skipped previously applied commit 388164d
+warning: skipped previously applied commit e584c69
+warning: skipped previously applied commit 9184c11
+warning: skipped previously applied commit ca8766b
+warning: skipped previously applied commit 1703875
+warning: skipped previously applied commit a9b4d60
+hint: use --reapply-cherry-picks to include skipped commits
+hint: Disable this message with "git config advice.skippedCherryPicks false"
+Auto-merging test.html/services.html
+CONFLICT (content): Merge conflict in test.html/services.html
+error: could not apply 58e5a3e... services commited fith time
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 58e5a3e... services commited fith time
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/team-page|REBASE 1/4)
+$ git add .
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/team-page|REBASE 1/4)
+$ git rebase --continue
+[detached HEAD 3b21ffb] services commited fith time
+ 1 file changed, 12 insertions(+)
+Successfully rebased and updated refs/heads/ft/team-page.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/team-page)
+$ git log --oneline
+744b5c5 (HEAD -> ft/team-page) team new  commit in ft 
+2b89f37 second new team commit
+566ebe3 Update README.md
+3b21ffb services commited fith time
+93795b1 (origin/ft/team-page) third commit team       
+78b3e8b second team commit
+e2077ad resolved merging problem
+22e5297 sixth sevice commit
+bb9feb3 changes in sevices for ex2 bundle2 second time
+e1575c7 changes in sevices for ex2 bundle2
+37b63e2 Update README.md
+d946ae1 services commited
+0c48d28 implement grid layout
+d0ce3e6 Update README.md
+6d0d51e About stash commited
+90d9b8e home stash commited
+ebbc922 need team stash to survive
+ed87954 need stash about
+d0aaac5 this will be stashed
+a331564 Update README.md
+6e248b7 perfect.html gitexercise
+1aa4bfd Initial commit
+50c8c05 new team commit
+3916c30 updated gitnavflex
+d703ff1 y git exercise
+cd7a24b first commit
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/team-page)
+$ git push -u origin ft/team-page
+Enumerating objects: 18, done.
+Counting objects: 100% (18/18), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (13/13), 5.07 KiB | 648.00 KiB/s, done.
+Total 13 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), completed with 4 local objects.
+To https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+   93795b1..744b5c5  ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main)
+$ git branch ft/contact-page
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (main)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/team-page)
+$ git log --oneline
+744b5c5 (HEAD -> ft/team-page, origin/ft/team-page) team new  commit in ft
+2b89f37 second new team commit
+566ebe3 Update README.md
+3b21ffb services commited fith time
+93795b1 third commit team
+78b3e8b second team commit
+e2077ad resolved merging problem
+22e5297 sixth sevice commit
+bb9feb3 changes in sevices for ex2 bundle2 second time
+e1575c7 changes in sevices for ex2 bundle2
+37b63e2 Update README.md
+d946ae1 services commited
+0c48d28 implement grid layout
+d0ce3e6 Update README.md
+6d0d51e About stash commited
+90d9b8e home stash commited
+ebbc922 need team stash to survive
+ed87954 need stash about
+d0aaac5 this will be stashed
+a331564 Update README.md
+6e248b7 perfect.html gitexercise
+1aa4bfd Initial commit
+50c8c05 new team commit
+3916c30 updated gitnavflex
+d703ff1 y git exercise
+cd7a24b first commit
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$ git cherry-pick 744b5c5
+Auto-merging team.html
+[ft/contact-page cb6690e] team new  commit in ft
+ Date: Thu May 25 19:29:29 2023 -0700
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$ git status
+On branch ft/contact-page
+nothing to commit, working tree clean
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$ git status
+On branch ft/contact-page
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   team.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$ git add team.html
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$ git commit -m "feat:added contact"
+[ft/contact-page 6b724d1] feat:added contact
+ 1 file changed, 5 insertions(+)
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$ git push -u origin ft/contact-page
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 589 bytes | 589.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/indekwe/Gym-Git-Exercise-Solution/pull/new/ft/contact-page
+remote:
+To https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$ git branch ft/faq-page
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$ git status
+On branch ft/contact-page
+Your branch is up to date with 'origin/ft/contact-page'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        faq.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$ git add faq.html
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$ git commit -m "feat:added afq-page"
+[ft/contact-page f5a26ef] feat:added afq-page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 faq.html
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$ git push -u origin ft/contact-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 460 bytes | 460.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+   6b724d1..f5a26ef  ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$ git log --oneline
+f5a26ef (HEAD -> ft/contact-page, origin/ft/contact-page) feat:added afq-page
+6b724d1 (ft/faq-page) feat:added contact
+cb6690e team new  commit in ft
+rrt "feat:add faqrevertedcommit-page"
+$ git revert f5a26ef
+[ft/contact-page bed02ad] rrt "feat:add faqrevertedcommit-page"
+ 1 file changed, 12 deletions(-)
+ delete mode 100644 faq.html
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$ git status
+On branch ft/contact-page
+Your branch is ahead of 'origin/ft/contact-page' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$ git push -u origin ft/contact-page
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 250 bytes | 250.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+   f5a26ef..bed02ad  ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$ git push -u origin ft/contact-page
+Everything up-to-date
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$ git  add .
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$ git status
+On branch ft/contact-page
+Your branch is up to date with 'origin/ft/contact-page'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   faq.html
+
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$  git commit -m "faq addedseco "
+[ft/contact-page cc226f4] faq addedseco
+ 1 file changed, 12 insertions(+)
+ create mode 100644 faq.html
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$ git push -u origin ft/contact-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 454 bytes | 454.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/indekwe/Gym-Git-Exercise-Solution.git
+   bed02ad..cc226f4  ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+1@DESKTOP-QOH1F4K MINGW64 /d/team.html (ft/contact-page)
+$
+                           ****
